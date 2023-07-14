@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="P2C Communication Non Primitive Data - (APEX)" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <p> Hello, I am sending data to my child component using apex.</p>
+            <c-p2c-display-records
+                record={accounts.data}
+                columns={columns}
+            ></c-p2c-display-records>
+        </div>
+    </lightning-card>
+</template>

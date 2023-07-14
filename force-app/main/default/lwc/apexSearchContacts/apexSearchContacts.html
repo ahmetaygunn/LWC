@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Imperative Apex with Parameters - Search Contact" icon-name="standard:contact">
+        <div class="slds-m-around_medium">
+            <lightning-input
+                label="Please enter keyword to search contacts' FirstName or LastName"
+                placeholder="search FirstName or LastName"
+                type="search"
+                value={keyWord}
+                onkeyup={searchContactHandler}>
+            </lightning-input>
+            <template if:true={contacts}>
+                <lightning-datatable
+                    key-field="id"
+                    columns={columns}
+                    class="slds-m-top_small"
+                    data={contacts}>
+                </lightning-datatable>
+            </template>
+        </div>
+    </lightning-card>
+</template>

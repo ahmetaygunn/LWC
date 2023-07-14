@@ -1,0 +1,53 @@
+<template>
+    <lightning-card title="createRecord Function - Contact" icon-name="standard:contact">
+        <div class="slds-m-around_medium">
+            <form class="contactForm">
+            <!--Note: we will use the "name" attribute. In this name attribute, I will use the api names of each field. This is an important step when I prepare my formdata-->
+            <lightning-input
+                label="First Name"
+                type="text"
+                name="FirstName"
+                onkeyup={changeHandler}> 
+            </lightning-input>
+            <lightning-input
+                label="Last Name"
+                type="text"
+                name="LastName"
+                onkeyup={changeHandler}> 
+            </lightning-input>
+            <lightning-input
+                label="Title"
+                type="text"
+                name="Title"
+                onkeyup={changeHandler}> 
+            </lightning-input>
+            <lightning-input
+                label="Email Address"
+                type="email"
+                name="Email"
+                onkeyup={changeHandler}> 
+            </lightning-input>
+            <lightning-input
+                label="Department"
+                type="text"
+                name="Department"
+                onkeyup={changeHandler}> 
+            </lightning-input>
+            </form>
+            <div class="slds-m-top_medium slds-align_absolute-center">
+                <lightning-button
+                    label="Cancel"
+                    class="slds-m-right_small"
+                    variant="brand-outline"
+                    onclick={cancelContactHandler}>
+                </lightning-button>
+                <lightning-button
+                    label="Save Contact"
+                    variant="brand"
+                    onclick={createContactHandler}>
+                </lightning-button>
+              
+            </div>
+        </div>
+    </lightning-card>
+</template>

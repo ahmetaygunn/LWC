@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Conditional Rendering - Button">
+        <div class="slds-m-around_medium">
+            <lightning-button
+            variant="brand"
+            label="Show Content"
+            onclick={showContent}
+            class="slds-m-right_small">
+        </lightning-button>
+
+        <lightning-button
+            variant="destructive"
+            label="Hide Content"
+            onclick={hideHandleClik}>
+        </lightning-button>
+        <template if:true={showContent}>
+            <div class="slds-m-top_x-small">
+                Hello there,<br>
+                    I am learning Lightning Web Components at TechPro Education. I liked this content and I believe that It will be a great asset for me and my career! It is fun to learn LWC!!!
+            </div>
+        </template>
+        
+
+        </div>
+    </lightning-card>
+</template>

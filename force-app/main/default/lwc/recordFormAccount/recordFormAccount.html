@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Lightining Record Form - Account" icon-name="standard:account_info">
+        <div class="slds-m-around_medium">
+            <lightning-record-form
+            object-api-name={objectName}
+            record-id={recordId}
+            fields={fields}
+            mode="edit"
+            columns=1
+            onsuccess={showSuccessMessage}
+            onerror={showErrorMessage}
+            onsubmit={showSubmitMessage}>
+        
+        </lightning-record-form>
+        </div>
+    </lightning-card>
+    
+    
+</template>

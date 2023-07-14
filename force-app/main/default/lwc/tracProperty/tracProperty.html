@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Track Property" icon-name="utilitiy.tracker">
+        <div class="slds-m-around_medium">
+            <div>Please update the following field</div>
+            <lightning-input></lightning-input>
+            type="text"
+            label="Enter the new location"
+            value={contact.location}
+            onkeyup={changeHandler}
+            </lightning-input>
+            <div>
+                <b>{contact.name}</b> live in <b>{contact.location}</b>.
+            </div>
+        </div>
+    </lightning-card>
+</template>

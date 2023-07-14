@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Conditional Rendering-1">
+        <div class="slds-m-around_medium">
+<template if:true={showContent}>
+    Hello, I am visible becouse the local property showContent in JS is true
+
+</template>
+<template if:false={showContent}>
+    Hello, I am visible because the local property showContent in JS is false
+
+</template>
+        </div>
+    </lightning-card>
+</template>

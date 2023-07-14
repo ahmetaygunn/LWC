@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="C2P Communication Simple Event" icon-name="action:edit">
+        <div class="slds-m-around_medium">
+            <div class="slds-m-bottom_small">
+                <p><b>Parent Component</b></p>
+                When you click on the button below the Modal will pop up and be seen on the same page above this app.
+            </div>
+            <div class="slds-m-bottom_small">
+                This is the message comes from the parent component:<br>
+                <b>{message}</b><br>
+                This is the data comes from the child custom event:<br>
+                <b>{msg}</b>
+            </div>
+            <lightning-button
+                label="Show Modal"
+                variant="brand"
+                onclick={clickHandler}>
+            </lightning-button>
+            <template if:true={showModal}>
+                <c-c2p-simple-event-child
+                   onapple={closeModalHandler} 
+                ></c-c2p-simple-event-child>
+            </template>
+        </div>
+    </lightning-card>
+</template>

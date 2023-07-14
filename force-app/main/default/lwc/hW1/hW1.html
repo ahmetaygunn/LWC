@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Homework" icon-name="standard:document">
+        <div class="slds-m-around_medium">
+           <lightning-input
+            type="text"
+            label= "Enter the firs Num"
+            onkeyup={num1EventHandler}
+            required=true
+            minlength="1"
+            maxlength="3">
+        </lightning-input>
+           
+           <lightning-input
+            type="text"
+            label= "Enter the second Num"
+            onkeyup={num2EventHandler}
+            required=true
+            minlength="1"
+            maxlength="3">
+           </lightning-input>
+           <div>
+            <b> {num1}</b> plus
+            <b> {num2}</b> is equal to <b>{getSum}</b>
+           </div>
+
+        </div>
+
+    </lightning-card>
+    
+</template>

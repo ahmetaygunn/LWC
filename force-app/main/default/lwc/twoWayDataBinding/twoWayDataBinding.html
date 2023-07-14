@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Two Way Data Binding" icon-name="standard:datashares">
+        <div class="slds-m-around_medium">
+            <div>Please enter your Name and Salesforce Title below.</div>
+            <lightning-input
+                type="text"
+                label="Enter Your  Name"
+                value={name}
+                onkeyup={nameChangeHandler}
+                maxlength="20"
+                minlength="4"
+                required>
+            </lightning-input>
+
+            <lightning-input
+                type="text"
+                label="Enter Your Salesforce Title"
+                value={title}
+                onkeyup={changeHandler}
+                maxlength="20"
+                minlength="4"
+                class="slds-m-top_small"
+                required>
+            </lightning-input>
+            <div class="slds-m-around_small">
+                Hello, my name is <b>{name}</b> and my title is <b>{title}</b>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>

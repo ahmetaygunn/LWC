@@ -1,0 +1,21 @@
+<template>
+    <div>
+        <p><b>Child Component</b></p>
+        1. Constructor Hook - Child<br>
+        2. connectedCallback Hook - Child<br>
+        3. renderedCallback Hook - Child   
+    </div>
+    <template if:true={error}>
+        <lightning-card title="Error Occurred on Child">
+            <div>Error Occurred</div>
+        </lightning-card>
+    </template>
+    <template if:false={error}>
+        <lightning-card title="Error NOT Occurred on Child">
+            <div>Error NOT Occurred</div>
+        </lightning-card>
+    </template>
+    <div class="slds-m-around_small">
+        {var1}
+    </div>
+</template>

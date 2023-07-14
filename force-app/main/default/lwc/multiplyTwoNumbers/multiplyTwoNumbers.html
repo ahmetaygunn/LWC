@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Multiply Two Numbers" icon-name="Standard:number_input">
+        <div class="slds-m-arounf_medium">
+
+        <div>
+            in this component, you were practicing, getters, one and two wat data binding, Lighting input form
+        </div>
+        <lightning-input
+        type="text"
+        label="Please enter first number"
+        value={num1}
+        onchange={num1EventHandler}
+        required=true
+        placeholder="Enter num1"
+        maxlength="10"
+        minlength="1">
+        
+    </lightning-input>
+    <lightning-input
+        type="text"
+        label="Please enter second number"
+        value={num2}
+        onchange={num2EventHandler}
+        required=true
+        placeholder="Enter num2"
+        maxlength=10;
+        minlength= 1;>
+        
+    </lightning-input>
+    <div class="slds-m-top_small">The product of <b>{num1}</b> and <b>{num2}</b> equals <b>{multiplyNumbers}</b>.</div>
+    </div>
+
+    </lightning-card>
+</template>

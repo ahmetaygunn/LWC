@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Imperative Apex - Account Search" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <lightning-input
+                label="Please enter a keyword to search any accounts in the system"
+                placeholder="Enter searchKey"
+                type="search"
+                value={searchWord}
+                onkeyup={searchHandler}>
+            </lightning-input>
+
+            <template if:true={accounts}>
+                <div class="slds-m-bottom_small">
+                    <b>SEARCH RESULTS</b>
+                </div>
+                <template for:each={accounts} for:item="w">
+                    <div key={w.Id} class="slds-m-bottom_small">
+                        <b>Account Name: </b> {w.Name}<br>
+                        <b>Account Type: </b> {w.Type}<br>
+                        <b>Account Number: </b> {w.AccountNumber}<br>
+                        <b>Industry: </b> {w.Industry}<br>
+                        <b>Annual Revenue: </b> {w.AnnualRevenue}<br>
+                     </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

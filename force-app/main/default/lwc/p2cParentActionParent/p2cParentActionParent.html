@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="P2C Communication Action Event at Parent" icon-name="standard:contact">
+        <div class="slds-m-around_medium">
+            <p><b>SEARCH CONTACTS</b></p>
+            <p>Note: This is the parent component and I will display the results on my child component</p>
+            <lightning-input
+                label="Please Search Contact information by First Name or Last Name"
+                type="search"
+                onkeyup={changeHandler}>
+            </lightning-input>
+            <div class="slds-m-top_medium"><b><u>SEARCH RESULTS:</u></b></div>
+            <c-p2c-display-records
+                record={contacts}
+                columns={columns}>
+            </c-p2c-display-records>
+        </div>
+    </lightning-card>
+</template>

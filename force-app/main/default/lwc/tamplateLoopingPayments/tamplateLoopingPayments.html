@@ -1,0 +1,19 @@
+<template>
+   <lightning-card title="Tamplate Looping Example - Payments" icon-name="standard:payment_gateway">
+    <div class="slds-m-around_medium">
+        <div> <b> Payment Information:</b></div> <br>
+        <template for:each={payments} for:item="payment">
+          <div key={payment.id} class="slds-m-bottom small">
+            <b>Type: </b> {payment.type} <br> 
+            <b>Amount: </b> $ {payment. amount} <br> <template if:true={payment.paid}>
+               <b>Paid?: </b> Yes <br> 
+            </template>
+            <template if:false={payment.paid}> 
+                <b>Paid?: </b> No <br>
+   
+              </template>
+           </div>
+         </template>
+      </div>
+   </lightning-card>
+</template>

@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="LWC Lifecycle Hooks" icon-name="action:refresh">
+        <div class="slds-m-around_medium">
+            <div class="slds-m-bottom_small">
+                <p><b>Parent Component</b></p>
+                1. Constructor Hook - Parent <br>
+                2. connectedCallback Hook - Parent<br> 
+                3. renderedCallback - Hook - Parent
+            </div>
+            <template if:true={error}>
+                <lightning-card title="Error Occurred on Parent">
+                    <div>Error Occurred</div>
+                </lightning-card>
+            </template>
+            <template if:false={error}>
+                <lightning-card title="Error NOT Occurred on Parent">
+                    <div>Error NOT Occurred</div>
+                </lightning-card>
+            </template>
+
+
+            <c-lifecycle-hooks-child></c-lifecycle-hooks-child> 
+        </div>
+    </lightning-card>
+</template>

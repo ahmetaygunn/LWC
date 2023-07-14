@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Lightning Record View Form - Contact" icon-name="standard:contact">
+        <div class="slds-m-around_medium">
+            <lightning-record-view-form
+            density={confy}
+            record-id={recordId}
+            object-api-name={objectName}>
+            <lightning-output-field field-name={fields.fname}></lightning-output-field>
+            <lightning-output-field field-name={fields.lname}></lightning-output-field>
+            <lightning-output-field field-name={fields.accId}></lightning-output-field>
+            <lightning-output-field field-name={fields.title}></lightning-output-field>
+            <template if:true={showContent}>
+                <lightning-output-field field-name={fields.email}></lightning-output-field>
+                <lightning-output-field field-name={fields.phone}></lightning-output-field>
+            </template>           
+            <lightning-output-field field-name={fields.dept}></lightning-output-field>
+        </lightning-record-view-form>
+        <lightning-input
+            label="Show/Hide Phone, Email"
+            type="checkbox"
+            checked={showContent}
+            onchange={toggleFields}>
+        </lightning-input>
+        <div>
+            <template if:true={showContent}>
+                You are able to see the email and Phone number of the Contact because the showContent is true.
+            </template>
+            <template if:false={showContent}>
+                You are NOT able to see the email and Phone number of the Contact because the showContent is FALSE.
+            </template>
+        </div>
+        </div>
+    </lightning-card>
+</template>

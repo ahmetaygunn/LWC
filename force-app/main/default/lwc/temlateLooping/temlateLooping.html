@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Template Looping-1">
+        <div class="slds-m-around_medium">
+            <div class="slds-m-bottom_x-small"> Please see the following list of fruits. We used for:each for:item syntax for this use-case.</div>
+            <template for:each={fruits} for:item="fruit">
+                <div key={fruit}>{fruit}</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

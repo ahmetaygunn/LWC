@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="P2C Communication - Primaitives Data"
+    icon-name="standard:contact">
+         <div class="slds-m-around_medium">
+
+          <p>Hello there! I am Parent Component. I sent data to my child component and Display the features of it here below.</p>
+          
+<!-- Usually, I would write the necessary code below here for my case. However, instead of this, I use Parent to Child Communication and send primitive data to my child component to use its features on my site.-->
+<!-- How can I call my child component here, then?-->
+<!--I prepare a brand new HTML element from the name of my child's js file. (My child's js file name is p2cPrimitivesChild). I use kebab case to name my element and the elemnt name becomes (<c-p2c-primitives-child>). Each word is separated by the hyphen (dash) and then I put my child's public properties as my new element's attributes. In this way, Parent Component will be able to pass the primitive data to the child component through these attributes.-->
+
+
+            <c-p2c-primitives-child
+                 full-name="Jeff Bezos"
+                 age="42"
+                 title="Salesforce Developer">
+            </c-p2c-primitives-child>
+
+         </div>
+    </lightning-card>
+</template>

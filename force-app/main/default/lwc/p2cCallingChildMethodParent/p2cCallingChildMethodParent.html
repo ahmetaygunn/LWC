@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="P2C Communication - Calling Child Method on Parent" icon-name="action:filter">
+        <div class="slds-m-around_medium">
+            <div class="slds-m-bottom_small">
+                <b>Parent Component</b><br>
+                In this component, I will call a method from the child component and display my child component here on the parent component.
+            </div>
+            <lightning-button
+                label="Reset Slider"
+                variant="success"
+                class="slds-align_absolute-center"
+                onclick={sliderHandler}>
+            </lightning-button>
+            <div class="slds-m-top_small slds-align_absolute-center">
+                <!--In order to see the slider, I called my child method here.-->
+                <c-p2c-calling-child-method-child
+                    msg={message}
+                ></c-p2c-calling-child-method-child>
+            </div>
+           
+            
+        </div>
+    </lightning-card>
+</template>
